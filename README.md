@@ -86,6 +86,12 @@ Upload PDF → Backend AI Processing → Real-Time Progress via Socket → Cours
 | Animate.css | ^4.1.1 | CSS animations |
 | AOS | ^2.3.4 | Scroll-triggered animations |
 
+### Document Processing
+
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| pdfjs-dist | ^6.2.108 | Client-side PDF page count validation (40-page limit) |
+
 ### Networking
 
 | Technology | Version | Purpose |

@@ -55,7 +55,7 @@ export default function profile() {
   const { user } = useAuth();
   const { data, isLoading, isError, error } = useAnalytics();
   const { data: courses, isLoading: loadingRecent, isError: errorRecent } = useRecentCourses({ page: 1, limit: 4 });
-  const { courseImages, loadingImages } = useGetCoursesImages();
+  const { courseImages, loadingImages } = useGetCoursesImages(courses?.courses ?? []);
   const analytics = data;
   console.log("analytics", data)
   const currentStreak = analytics?.currentLoginStreak ?? 0;
@@ -152,7 +152,6 @@ export default function profile() {
                 <Badge variant="success" icon={<Flame className="w-3 h-3" />}>
                   {isLoading ? '—' : currentStreak} Day Streak
                 </Badge>
-                <Badge variant="gray">{userProfile.joinDate}</Badge>
               </div>
             </div>
 

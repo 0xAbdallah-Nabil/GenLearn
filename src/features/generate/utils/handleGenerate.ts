@@ -3,6 +3,9 @@ import { submitGenerateJob } from '@/services/generateService';
 import { connectSocket } from '@/services/socket';
 import { useNotification } from '@/contexts/NotificationContext';
 import { useGenerationSocket, type SocketStatus } from '@/hooks/mutations/useGenerationSocket';
+import { getPdfPageCount } from './pdfPageCount';
+
+export const MAX_PDF_PAGES = 40;
 
 // Local phase before a jobId exists — the socket hook takes over
 // (and drives `processingStage`) as soon as a jobId is assigned.
@@ -67,6 +70,21 @@ const handleGenerate = () => {
     setFile(selectedFile);
     setError(null);
     setUploadPhase('uploading');
+
+    try {
+      const pageCount = await getPdfPageCount(selectedFile);
+      if (pageCount > MAX_PDF_PAGES) {
+        setError(`Your PDF has ${pageCount} pages. The maximum allowed is ${MAX_PDF_PAGES} pages.`);
+        setUploadPhase('error');
+        generatingRef.current = false;
+        return;
+      }
+    } catch {
+      setError('Unable to read this PDF. Please make sure the file is valid.');
+      setUploadPhase('error');
+      generatingRef.current = false;
+      return;
+    }
 
     connectSocket();
 
