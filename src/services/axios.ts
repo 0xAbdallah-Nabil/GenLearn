@@ -9,6 +9,21 @@ const axiosInstance = axios.create({
 const isRefreshRequest = (config?: AxiosRequestConfig) =>
   config?.url?.includes("/api/v1/auth/refresh");
 
+// Auth endpoints where a 401 means invalid credentials — NOT an expired token.
+// Retrying them through the refresh flow would mask the real error with a
+// misleading "refresh token missing" failure.
+const isAuthRequest = (config?: AxiosRequestConfig) => {
+  const url = config?.url ?? "";
+  return (
+    url.includes("/api/v1/auth/login") ||
+    url.includes("/api/v1/auth/register") ||
+    url.includes("/api/v1/auth/forgot-password") ||
+    url.includes("/api/v1/auth/reset-password") ||
+    url.includes("/api/v1/auth/verify-email") ||
+    url.includes("/api/v1/auth/resend-verification-email")
+  );
+};
+
 const clearAuthState = () => {
   // Don't redirect if we're on a public auth page (verify-email, forgot-password, reset-password)
   const publicPages = ["/", "/verify-email", "/forgot-password", "/reset-password", "/signup", "/login", "/about", "/contact", "/privacy", "/terms"];
@@ -47,7 +62,11 @@ axiosInstance.interceptors.response.use(
       return Promise.reject(error);
     }
 
-    if (error.response?.status === 401 && !originalRequest._retry) {
+    if (
+      error.response?.status === 401 &&
+      !originalRequest._retry &&
+      !isAuthRequest(originalRequest)
+    ) {
       // Never retry POST requests to the generate endpoint — re-sending
       // them would create duplicate jobs / courses on the server.
       if (originalRequest.method?.toUpperCase() === "POST" && originalRequest.url?.includes("/api/v1/generate/")) {
