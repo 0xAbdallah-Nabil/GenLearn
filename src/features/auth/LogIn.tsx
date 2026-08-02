@@ -160,15 +160,6 @@ function Login() {
             </div>
           )}
 
-          {/* Divider */}
-          <div className="relative mb-6">
-            <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-gray-200" />
-            </div>
-            <div className="relative flex justify-center text-sm">
-              <span className="px-4 bg-[#FAFAFC] text-gray-500">or continue with email</span>
-            </div>
-          </div>
 
           {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-5">
