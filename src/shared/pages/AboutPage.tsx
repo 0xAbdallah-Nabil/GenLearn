@@ -2,76 +2,86 @@ import { ArrowLeft, Zap, BookOpen, Cpu, Users, Target, Heart, Lightbulb, Rocket 
 import { Button, Card } from '../../components/ui/index';
 import { Link } from 'react-router-dom';
 import image from '@/assets/images/logoOld.png';
+import AbdallahNabil from '@/assets/images/Team/Abdallah Nabil.jpeg';
+import AlZahraaHassan from '@/assets/images/Team/Al-Zahraa Hassan.jpg';
+import KhaledNashat from '@/assets/images/Team/kHaled Nashat.jpeg';
+import MahmoudSerag from '@/assets/images/Team/Mahmoud Serag.jpeg';
+import MennaAbdelaziz from '@/assets/images/Team/Menna Abdelaziz.jpg';
+import MohamedElshahaby from '@/assets/images/Team/Mohamed ELshahaby.jpeg';
+import MohamedGamal from '@/assets/images/Team/Mohamed Gamal.jpeg';
+import MohamedMetwaly from '@/assets/images/Team/Mohamed Metwaly.jpeg';
+import OmarAzzam from '@/assets/images/Team/Omar Azzam.jpeg';
+import ZiyadFouda from '@/assets/images/Team/Ziad Fouda.jpeg';
 const team = [
   {
-    name: 'Omar Ahmed Ibrahim',
-    role: 'AI Engineer & Team Leader',
+    name: 'Mahmoud Serag',
+    role: 'Mobile App Developer',
     bio: 'Leading the AI team and developing intelligent learning solutions.',
-    image:
-      'https://api.dicebear.com/9.x/initials/svg?seed=Omar%20Ahmed%20Ibrahim',
+    image: MahmoudSerag,
+    link: 'https://github.com/mahmoudserrag',
   },
   {
-    name: 'Al-Zahraa Hassan Mohamed',
-    role: 'Mobile App Developer',
-    bio: 'Building seamless and responsive mobile applications.',
-    image:
-      'https://api.dicebear.com/9.x/initials/svg?seed=Al-Zahraa%20Hassan%20Mohamed',
-  },
-  {
-    name: 'Ziyad Mohamed Fouda',
-    role: 'AI Engineer',
-    bio: 'Developing AI models and intelligent content generation systems.',
-    image:
-      'https://api.dicebear.com/9.x/initials/svg?seed=Ziyad%20Mohamed%20Fouda',
-  },
-  {
-    name: 'Mahmoud Hamdino Ibrahim',
-    role: 'Mobile App Developer',
-    bio: 'Creating modern and user-friendly mobile experiences.',
-    image:
-      'https://api.dicebear.com/9.x/initials/svg?seed=Mahmoud%20Hamdino%20Ibrahim',
-  },
-  {
-    name: 'Menna Ahmed Mohamed Ali',
-    role: 'AI Engineer',
-    bio: 'Working on AI-powered educational technologies.',
-    image:
-      'https://api.dicebear.com/9.x/initials/svg?seed=Menna%20Ahmed%20Mohamed%20Ali',
-  },
-  {
-    name: 'Mohamed Yasser Elshahaby',
-    role: 'Backend Developer',
-    bio: 'Building reliable backend architecture and services.',
-    image:
-      'https://api.dicebear.com/9.x/initials/svg?seed=Mohamed%20Yasser%20Elshahaby',
-  },
-  {
-    name: 'Khaled Nashat Attallah',
-    role: 'Backend Developer',
-    bio: 'Designing scalable backend services and APIs.',
-    image:
-      'https://api.dicebear.com/9.x/initials/svg?seed=Khaled%20Nashat%20Attallah',
-  },
-  {
-    name: 'Abdallah Nabil Elsaid Agila',
+    name: 'Abdallah Nabil',
     role: 'Frontend Developer',
     bio: 'Building modern, responsive, and interactive user interfaces.',
-    image:
-      'https://api.dicebear.com/9.x/initials/svg?seed=Abdallah%20Nabil%20Elsaid%20Agila',
+    image: AbdallahNabil,
+    link: 'https://www.linkedin.com/in/0xabdallah-nabil/',
   },
   {
-    name: 'Mohamed Gamal Mansour',
-    role: 'Backend Developer',
-    bio: 'Developing secure and high-performance backend systems.',
-    image:
-      'https://api.dicebear.com/9.x/initials/svg?seed=Mohamed%20Gamal%20Mansour',
+    name: 'Omar Azzam',
+    role: 'AI Engineer & Team Leader',
+    bio: 'Building seamless and responsive web applications.',
+    image: OmarAzzam,
+    link: 'https://www.linkedin.com/in/omar1azzam/',
   },
   {
-    name: 'Mohamed Mahmoud Metwally',
+    name: 'Menna Abdelaziz',
+    role: 'AI Engineer',
+    bio: 'Working on AI-powered educational technologies.',
+    image: MennaAbdelaziz,
+    link: 'https://www.linkedin.com/in/menna-abdelaziz-964a87351/',
+  },
+  {
+    name: 'Al-Zahraa Elghandour',
+    role: 'Mobile App Developer',
+    bio: 'Building seamless and responsive mobile applications.',
+    image: AlZahraaHassan,
+    link: 'https://www.linkedin.com/in/al-zahraa-elghandour-449620249/',
+  },
+  {
+    name: 'Mohamed M. Metwally',
     role: 'UI/UX Designer',
     bio: 'Designing intuitive and engaging user experiences.',
-    image:
-      'https://api.dicebear.com/9.x/initials/svg?seed=Mohamed%20Mahmoud%20Metwally',
+    image: MohamedMetwaly,
+    link: 'https://www.linkedin.com/in/mohamed-m-metwally-profile/',
+  },
+  {
+    name: 'Mohamed Gamal',
+    role: 'Backend Developer',
+    bio: 'Developing secure and high-performance backend systems.',
+    image: MohamedGamal,
+    link: 'https://www.linkedin.com/in/m0hamed-gamall/',
+  },
+  {
+    name: 'Ziyad Fouda',
+    role: 'AI Engineer',
+    bio: 'Developing AI models and intelligent content generation systems.',
+    image: ZiyadFouda,
+    link: 'https://www.linkedin.com/in/zfouda/',
+  },
+  {
+    name: 'Khaled Nashat',
+    role: 'Backend Developer',
+    bio: 'Designing scalable backend services and APIs.',
+    image: KhaledNashat,
+    link: 'https://www.linkedin.com/in/khaled-nashat-a85193257/',
+  },
+  {
+    name: 'Mohamed Elshahaby',
+    role: 'Backend Developer',
+    bio: 'Building reliable backend architecture and services.',
+    image: MohamedElshahaby,
+    link: 'https://www.linkedin.com/in/mohamedelshahabya852277/',
   },
 ];
 
@@ -180,21 +190,26 @@ export default function AboutPage() {
               We're educators, engineers, and dreamers united by a passion for accessible learning.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
             {team.map((member) => (
-              <Card key={member.name} className="!p-0 overflow-hidden">
-                <div className="aspect-square relative">
-                  <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                    <h3 className="font-bold">{member.name}</h3>
-                    <p className="text-sm text-white/80">{member.role}</p>
+              <a
+                key={member.name}
+                href={member.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block transition-transform hover:-translate-y-1"
+              >
+                <Card className="!p-0 overflow-hidden h-full">
+                  <div className="aspect-square relative">
+                    <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                      <h3 className="font-bold">{member.name}</h3>
+                      <p className="text-sm text-white/80">{member.role}</p>
+                    </div>
                   </div>
-                </div>
-                <div className="p-4">
-                  <p className="text-sm text-gray-600">{member.bio}</p>
-                </div>
-              </Card>
+                </Card>
+              </a>
             ))}
           </div>
         </div>
