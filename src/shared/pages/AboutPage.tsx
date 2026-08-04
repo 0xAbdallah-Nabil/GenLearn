@@ -14,12 +14,13 @@ import OmarAzzam from '@/assets/images/Team/Omar Azzam.jpeg';
 import ZiyadFouda from '@/assets/images/Team/Ziad Fouda.jpeg';
 const team = [
   {
-    name: 'Mahmoud Serag',
-    role: 'Mobile App Developer',
-    bio: 'Leading the AI team and developing intelligent learning solutions.',
-    image: MahmoudSerag,
-    link: 'https://github.com/mahmoudserrag',
-  },
+    name: 'Mohamed Elshahaby',
+    role: 'Backend Developer',
+    bio: 'Building reliable backend architecture and services.',
+    image: MohamedElshahaby,
+    link: 'https://www.linkedin.com/in/mohamedelshahabya852277/',
+  }
+  ,
   {
     name: 'Abdallah Nabil',
     role: 'Frontend Developer',
@@ -83,6 +84,13 @@ const team = [
     image: MohamedElshahaby,
     link: 'https://www.linkedin.com/in/mohamedelshahabya852277/',
   },
+  {
+    name: 'Mahmoud Serag',
+    role: 'Mobile App Developer',
+    bio: 'Leading the AI team and developing intelligent learning solutions.',
+    image: MahmoudSerag,
+    link: 'https://github.com/mahmoudserrag',
+  }
 ];
 
 const timeline = [
