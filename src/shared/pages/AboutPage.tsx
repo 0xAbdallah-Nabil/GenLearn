@@ -71,25 +71,18 @@ const team = [
     link: 'https://www.linkedin.com/in/zfouda/',
   },
   {
-    name: 'Khaled Nashat',
-    role: 'Backend Developer',
-    bio: 'Designing scalable backend services and APIs.',
-    image: KhaledNashat,
-    link: 'https://www.linkedin.com/in/khaled-nashat-a85193257/',
-  },
-  {
-    name: 'Mohamed Elshahaby',
-    role: 'Backend Developer',
-    bio: 'Building reliable backend architecture and services.',
-    image: MohamedElshahaby,
-    link: 'https://www.linkedin.com/in/mohamedelshahabya852277/',
-  },
-  {
     name: 'Mahmoud Serag',
     role: 'Mobile App Developer',
     bio: 'Leading the AI team and developing intelligent learning solutions.',
     image: MahmoudSerag,
     link: 'https://github.com/mahmoudserrag',
+  },
+  {
+    name: 'Khaled Nashat',
+    role: 'Backend Developer',
+    bio: 'Designing scalable backend services and APIs.',
+    image: KhaledNashat,
+    link: 'https://www.linkedin.com/in/khaled-nashat-a85193257/',
   }
 ];
 
