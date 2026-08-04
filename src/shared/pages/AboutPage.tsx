@@ -50,13 +50,6 @@ const team = [
     link: 'https://www.linkedin.com/in/al-zahraa-elghandour-449620249/',
   },
   {
-    name: 'Mohamed M. Metwally',
-    role: 'UI/UX Designer',
-    bio: 'Designing intuitive and engaging user experiences.',
-    image: MohamedMetwaly,
-    link: 'https://www.linkedin.com/in/mohamed-m-metwally-profile/',
-  },
-  {
     name: 'Mohamed Gamal',
     role: 'Backend Developer',
     bio: 'Developing secure and high-performance backend systems.',
@@ -83,6 +76,13 @@ const team = [
     bio: 'Designing scalable backend services and APIs.',
     image: KhaledNashat,
     link: 'https://www.linkedin.com/in/khaled-nashat-a85193257/',
+  },
+    {
+    name: 'Mohamed M. Metwally',
+    role: 'UI/UX Designer',
+    bio: 'Designing intuitive and engaging user experiences.',
+    image: MohamedMetwaly,
+    link: 'https://www.linkedin.com/in/mohamed-m-metwally-profile/',
   }
 ];
 
